@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operational Research Solver</title>
+    <style>
+        /* General Styling */
+        /*#Made by Shreyas Bhave (B216) and Vitthal Gautam (B239)*/
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #34495e;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 2em;
+        }
+
+        form {
+            background-color: #ffffff;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        textarea,
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        div.output {
+            background-color: #ecf0f1;
+            border: 1px solid #bdc3c7;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            /* Preserve line breaks */
+        }
+
+        .output p {
+            margin: 0;
+            padding: 5px 0;
+        }
+
+        .output strong {
+            color: #2c3e50;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #2c3e50;
+            color: white;
+            margin-top: auto;
+            /* Push footer to bottom */
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Operational Research Solver</h1>
+
+    <form id="assignmentForm">
+        <label for="costMatrix">Enter Cost Matrix (comma-separated rows):</label>
+        <textarea id="costMatrix" rows="4"
+            placeholder="E.g., 8,4,2&#10;6,1,5&#10;3,2,7"></textarea>
+        <button type="button" onclick="solveAssignment()">Solve Assignment Problem</button>
+    </form>
+    <div id="assignmentResult" class="output"></div>
+
+    <form id="transportationForm">
+        <label for="costMatrixTransport">Enter Cost Matrix (comma-separated rows):</label>
+        <textarea id="costMatrixTransport" rows="4"
+            placeholder="E.g., 3,2,1&#10;4,6,5"></textarea>
+
+        <label for="supply">Supply (comma-separated):</label>
+        <input type="text" id="supply" placeholder="E.g., 30,40">
+
+        <label for="demand">Demand (comma-separated):</label>
+        <input type="text" id="demand" placeholder="E.g., 20,30,20">
+
+        <button type="button" onclick="solveTransportation()">Solve Transportation
+            Problem</button>
+    </form>
+    <div id="transportationResult" class="output"></div>
+
+    <footer>
+        <p>Operational Research Solver &copy; 2024</p> 
+        <p>Made by Shreyas Bhave (B216) and Vitthal Gautam (B239)</p> 
+    </footer>
+
+    <script>
+        // ... (Your JavaScript code remains the same) ...
+    </script>
+</body>
+
+</html>
